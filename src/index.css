@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
+@font-face {
+  font-family: placard;
+  src: url("./assets/placard-condensed.ttf");
+}
+@font-face {
+  font-family: anurati;
+  src: url("./assets/Anurati-Regular.otf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  width:100%;
+  overflow-x:hidden;
+  background-color: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
