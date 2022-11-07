@@ -1,6 +1,9 @@
 import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { Box } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
+import HomePage from "./pages/HomePage";
+import StartResume from "./pages/StartResume";
 
 const theme = createTheme({
   palette: {
@@ -27,7 +30,13 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      
+      <Box>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/start" element={<StartResume />} />
+          <Route path="/*" element={<Navigate to="/" />} />
+        </Routes>
+      </Box>
     </ThemeProvider>
   );
 }
