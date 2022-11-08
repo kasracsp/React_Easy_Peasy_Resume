@@ -2,6 +2,11 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Box } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import ScrollToTop from './shared/ScrollToTop'
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import HomePage from "./pages/HomePage";
 import StartResume from "./pages/StartResume";
 
@@ -30,13 +35,18 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Box>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/start" element={<StartResume />} />
-          <Route path="/*" element={<Navigate to="/" />} />
-        </Routes>
-      </Box>
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
+        <Provider store={store}>
+          <Box>
+            <ScrollToTop/>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/start" element={<StartResume />} />
+              <Route path="/*" element={<Navigate to="/" />} />
+            </Routes>
+          </Box>
+        </Provider>
+      </LocalizationProvider>
     </ThemeProvider>
   );
 }
