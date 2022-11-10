@@ -11,7 +11,6 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import DoneIcon from "@mui/icons-material/Done";
-import coffeeBoy from "../../assets/coffeeBoy.png";
 import { Link } from "react-router-dom";
 import useObserver from "../../hooks/useObserver";
 
@@ -53,7 +52,7 @@ const Intro = () => {
         marginX: "auto",
       }}
     >
-      <Stack spacing={3}>
+      <Stack spacing={3} sx={{width:{xs:'100%',lg:'50%'}}}>
         <Typography
           variant="h1"
           sx={{
@@ -117,7 +116,7 @@ const Intro = () => {
           transitionDelay: "300ms",
         }}
       >
-        <img src={coffeeBoy} alt="coffee boy" />
+        <img src="https://www.uplooder.net/img/image/93/d5a9e67c5e19740d62b8c9bb532fce71/coffeeBoy.png" alt="coffee boy" />
       </Box>
     </Stack>
   );

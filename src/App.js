@@ -9,6 +9,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import HomePage from "./pages/HomePage";
 import StartResume from "./pages/StartResume";
+import ChooseModel from "./pages/ChooseModel";
 
 const theme = createTheme({
   palette: {
@@ -42,6 +43,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/start" element={<StartResume />} />
+              <Route path="/choosemodel" element={<ChooseModel />} />
               <Route path="/*" element={<Navigate to="/" />} />
             </Routes>
           </Box>
