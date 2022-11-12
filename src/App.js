@@ -12,6 +12,7 @@ import StartResume from "./pages/StartResume";
 import ChooseModel from "./pages/ChooseModel";
 import GraphicFace from './pages/graphic/GraphicFace'
 import PrestigeFace from './pages/prestige/PrestigeFace'
+import RecommendedFace from './pages/recommended/RecommendedFace'
 
 const theme = createTheme({
   palette: {
@@ -48,6 +49,7 @@ function App() {
               <Route path="/choosemodel" element={<ChooseModel />} />
               <Route path="/graphicface" element={<GraphicFace />} />
               <Route path="/prestigeface" element={<PrestigeFace />} />
+              <Route path="/recommendedface" element={<RecommendedFace />} />
               <Route path="/*" element={<Navigate to="/" />} />
             </Routes>
           </Box>
