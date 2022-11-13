@@ -13,6 +13,7 @@ import ChooseModel from "./pages/ChooseModel";
 import GraphicFace from './pages/graphic/GraphicFace'
 import PrestigeFace from './pages/prestige/PrestigeFace'
 import RecommendedFace from './pages/recommended/RecommendedFace'
+import SpecialFace from './pages/special/SpecialFace'
 
 const theme = createTheme({
   palette: {
@@ -50,6 +51,7 @@ function App() {
               <Route path="/graphicface" element={<GraphicFace />} />
               <Route path="/prestigeface" element={<PrestigeFace />} />
               <Route path="/recommendedface" element={<RecommendedFace />} />
+              <Route path="/specialface" element={<SpecialFace />} />
               <Route path="/*" element={<Navigate to="/" />} />
             </Routes>
           </Box>
